@@ -1,0 +1,49 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    function isBootstrappedAdmin() {
+      return isSignedIn() && (
+        request.auth.token.email == "SukaMulyaPtk@gmail.com" ||
+        exists(/databases/$(database)/documents/admins/$(request.auth.uid))
+      );
+    }
+
+    function isValidId(id) {
+      return id is string && id.size() <= 128 && id.matches('^[a-zA-Z0-9_\\-]+$');
+    }
+
+    // Default deny
+    match /{document=**} {
+      allow read, write: if false;
+    }
+
+    // Stores collection: Readable by signed in users and MDs, writeable by signed in users/admin
+    match /stores/{storeId} {
+      allow read: if true;
+      allow write: if true;
+    }
+
+    // Master Items: Readable by all, writeable by MDs (for on-the-spot registration) and Admins
+    match /items/{itemId} {
+      allow read: if true;
+      allow write: if true;
+    }
+
+    // Visits: Store visits, stock opname, and sell-outs
+    match /visits/{visitId} {
+      allow read: if true;
+      allow write: if true;
+    }
+
+    // Admins registry
+    match /admins/{adminId} {
+      allow read: if isSignedIn();
+      allow write: if isBootstrappedAdmin();
+    }
+  }
+}

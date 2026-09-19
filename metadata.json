@@ -1,0 +1,10 @@
+{
+  "name": "MD.SYS",
+  "description": "Offline-First application for store visit management and sales tracking.",
+  "requestFramePermissions": [
+    "camera"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

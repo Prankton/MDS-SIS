@@ -1,0 +1,71 @@
+{
+  "entities": {
+    "Store": {
+      "title": "Store",
+      "description": "Store location, schedule, and priority order for visits",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string", "minLength": 1, "maxLength": 100 },
+        "location": { "type": "string", "minLength": 1, "maxLength": 200 },
+        "mapsUrl": { "type": "string", "maxLength": 500 },
+        "visitDay": { "type": "string", "enum": ["Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu", "Minggu"] },
+        "visitOrder": { "type": "number" },
+        "createdAt": { "type": "string" },
+        "updatedAt": { "type": "string" }
+      },
+      "required": ["name", "location", "visitDay", "visitOrder"]
+    },
+    "Item": {
+      "title": "Item",
+      "description": "Master merchandise product with 3-tier unit conversion and price tiers",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "barcode": { "type": "string", "minLength": 3, "maxLength": 64 },
+        "name": { "type": "string", "minLength": 1, "maxLength": 120 },
+        "boxPerDus": { "type": "number" },
+        "pcsPerBox": { "type": "number" },
+        "priceDus": { "type": "number" },
+        "priceBox": { "type": "number" },
+        "pricePcs": { "type": "number" },
+        "createdAt": { "type": "string" },
+        "updatedAt": { "type": "string" }
+      },
+      "required": ["barcode", "name", "boxPerDus", "pcsPerBox", "priceDus", "priceBox", "pricePcs"]
+    },
+    "Visit": {
+      "title": "Visit",
+      "description": "Store visit logs including check-in/out, stock opname with previous week comparison, and customer sell-out records",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "storeId": { "type": "string" },
+        "storeName": { "type": "string" },
+        "mdId": { "type": "string" },
+        "mdName": { "type": "string" },
+        "visitDay": { "type": "string" },
+        "visitDate": { "type": "string" },
+        "status": { "type": "string", "enum": ["in_progress", "completed"] },
+        "checkInTime": { "type": "string" },
+        "checkOutTime": { "type": "string" },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["storeId", "storeName", "mdName", "status"]
+    }
+  },
+  "firestore": {
+    "/stores/{storeId}": {
+      "schema": { "$ref": "#/entities/Store" },
+      "description": "Store profiles and daily schedule with priority ordering"
+    },
+    "/items/{itemId}": {
+      "schema": { "$ref": "#/entities/Item" },
+      "description": "Master product catalog with 3-tier conversion and pricing"
+    },
+    "/visits/{visitId}": {
+      "schema": { "$ref": "#/entities/Visit" },
+      "description": "Completed and in-progress visit logs, stock audits, and sell-outs"
+    }
+  }
+}

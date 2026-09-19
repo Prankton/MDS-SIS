@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <rect width="512" height="512" rx="64" fill="#0A0B0D" />
+  <rect x="24" y="24" width="464" height="464" rx="48" fill="none" stroke="#262930" stroke-width="4" />
+  <!-- Swiss Red Accent Corner -->
+  <rect x="56" y="56" width="32" height="8" fill="#EF4444" />
+  <text x="56" y="110" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="44" font-weight="900" fill="#FFFFFF" letter-spacing="-1.5">MD.SYS</text>
+  <text x="56" y="142" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="16" font-weight="700" fill="#94A3B8" letter-spacing="3">OFFLINE-FIRST OPS</text>
+  
+  <!-- Minimalist Grid Structure -->
+  <rect x="56" y="180" width="180" height="120" rx="8" fill="#14171C" stroke="#262930" stroke-width="2" />
+  <circle cx="96" cy="220" r="14" fill="#EF4444" />
+  <rect x="124" y="214" width="88" height="12" rx="4" fill="#F8FAFC" />
+  <rect x="96" y="254" width="116" height="8" rx="2" fill="#64748B" />
+  <rect x="96" y="270" width="80" height="8" rx="2" fill="#475569" />
+
+  <rect x="256" y="180" width="200" height="120" rx="8" fill="#14171C" stroke="#262930" stroke-width="2" />
+  <rect x="280" y="208" width="150" height="10" rx="2" fill="#F8FAFC" />
+  <rect x="280" y="228" width="120" height="8" rx="2" fill="#64748B" />
+  <rect x="280" y="252" width="50" height="24" rx="4" fill="#22C55E" />
+  <text x="290" y="268" font-family="monospace" font-size="12" font-weight="bold" fill="#0A0B0D">SYNCED</text>
+
+  <!-- Large Barcode Graphic Motif -->
+  <g transform="translate(56, 330)">
+    <rect x="0" y="0" width="400" height="100" rx="8" fill="#14171C" stroke="#262930" stroke-width="2" />
+    <line x1="30" y1="20" x2="30" y2="80" stroke="#FFFFFF" stroke-width="6" />
+    <line x1="45" y1="20" x2="45" y2="80" stroke="#FFFFFF" stroke-width="2" />
+    <line x1="55" y1="20" x2="55" y2="80" stroke="#FFFFFF" stroke-width="8" />
+    <line x1="75" y1="20" x2="75" y2="80" stroke="#FFFFFF" stroke-width="4" />
+    <line x1="90" y1="20" x2="90" y2="80" stroke="#FFFFFF" stroke-width="2" />
+    <line x1="105" y1="20" x2="105" y2="80" stroke="#FFFFFF" stroke-width="10" />
+    <line x1="125" y1="20" x2="125" y2="80" stroke="#FFFFFF" stroke-width="4" />
+    <line x1="140" y1="20" x2="140" y2="80" stroke="#FFFFFF" stroke-width="2" />
+    <line x1="155" y1="20" x2="155" y2="80" stroke="#FFFFFF" stroke-width="6" />
+    <line x1="175" y1="20" x2="175" y2="80" stroke="#FFFFFF" stroke-width="4" />
+    <line x1="190" y1="20" x2="190" y2="80" stroke="#FFFFFF" stroke-width="12" />
+    <line x1="215" y1="20" x2="215" y2="80" stroke="#FFFFFF" stroke-width="3" />
+    <line x1="230" y1="20" x2="230" y2="80" stroke="#FFFFFF" stroke-width="8" />
+    <line x1="250" y1="20" x2="250" y2="80" stroke="#FFFFFF" stroke-width="4" />
+    <line x1="265" y1="20" x2="265" y2="80" stroke="#FFFFFF" stroke-width="10" />
+    <line x1="290" y1="20" x2="290" y2="80" stroke="#FFFFFF" stroke-width="2" />
+    <line x1="305" y1="20" x2="305" y2="80" stroke="#FFFFFF" stroke-width="6" />
+    <line x1="325" y1="20" x2="325" y2="80" stroke="#FFFFFF" stroke-width="4" />
+    <line x1="345" y1="20" x2="345" y2="80" stroke="#FFFFFF" stroke-width="8" />
+    <line x1="365" y1="20" x2="365" y2="80" stroke="#FFFFFF" stroke-width="4" />
+  </g>
+</svg>
